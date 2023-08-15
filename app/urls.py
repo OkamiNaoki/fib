@@ -1,6 +1,6 @@
 from django.urls import path
-from app import views
+from . import views
 
 urlpatterns = [
-    path("", views.FibonacciView(), name="fibonacci"),
+    path("", views.FibonacciView.as_view(), name="fibonacci"),  # Use as_view() here
 ]
